@@ -1,0 +1,20 @@
+//
+// Extends: Form
+//
+// @package     WPDTRT_SCSS
+// @since       0.1.0
+
+// -------------------------------------------------------------------
+// Extends
+// -------------------------------------------------------------------
+
+%wpdtrt-scss {
+    &-form {
+        &-input-hint-text {
+            display: block;
+            font-size: 13px;
+            font-style: normal;
+            margin-top: 4px;
+        }
+    }
+}

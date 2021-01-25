@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "name": "wpdtrt-scss",
+  "version": "0.1.0",
+  "description": "SCSS mixins and extends for shared theming across projects.",
+  "keywords": [
+    "SCSS",
+    "CSS"
+  ],
+  "main": "scss/import.scss",
+  "person": {
+    "name": "Dan Smith",
+    "email": "dev@dotherightthing.co.nz",
+    "url": "https://profiles.wordpress.org/dotherightthingnz"
+  },
+  "contributors": [
+    {
+      "name": "Dan Smith",
+      "email": "dev@dotherightthing.co.nz",
+      "url": "https://profiles.wordpress.org/dotherightthingnz"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/dotherightthing/wpdtrt-scss/issues"
+  },
+  "config": {
+    "wpdtrt_base_url_local": "http://localhostname.dan",
+    "wpdtrt_npm_scripts": "./node_modules/wpdtrt-npm-scripts"
+  },
+  "scripts": {
+    "changelog": "npm run changelog --prefix $npm_package_config_wpdtrt_npm_scripts",
+    "compile": "npm run compile --prefix $npm_package_config_wpdtrt_npm_scripts",
+    "docs": "npm run docs --prefix $npm_package_config_wpdtrt_npm_scripts",
+    "lint": "npm run lint --prefix $npm_package_config_wpdtrt_npm_scripts",
+    "release": "npm run release --prefix $npm_package_config_wpdtrt_npm_scripts",
+    "test": "npm run test --prefix $npm_package_config_wpdtrt_npm_scripts",
+    "test:jsui": "npx cypress open",
+    "version": "npm run version --prefix $npm_package_config_wpdtrt_npm_scripts",
+    "watch": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dotherightthing/wpdtrt-scss"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/dotherightthing/wpdtrt-scss",
+  "srcDir": "/Volumes/DanBackup/Websites/wpdtrt-scss",
+  "devDependencies": {
+    "wpdtrt-npm-scripts": "github:dotherightthing/wpdtrt-npm-scripts#semver:0.3.*"
+  }
+}

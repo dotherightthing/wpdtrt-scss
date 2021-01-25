@@ -1,0 +1,19 @@
+//
+// Extends: WordPress Attachments
+//
+// @package     WPDTRT_SCSS
+// @since       0.1.0
+//
+
+// -------------------------------------------------------------------
+// Extends
+// -------------------------------------------------------------------
+
+// add a divider after the last attachment field added by a plugin
+%wpdtrt-scss {
+    &-last-attachment-field-divider {
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--wpdtrt-plugin-boilerplate-divider-custom-field);
+        margin-bottom: 15px;
+    }
+}

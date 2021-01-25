@@ -1,0 +1,29 @@
+//
+// Extends: Type
+//
+// @package     WPDTRT_SCSS
+// @since       0.1.0
+//
+
+// -------------------------------------------------------------------
+// Extends
+// -------------------------------------------------------------------
+
+%wpdtrt-scss {
+    &-type {
+        &-sharpen {
+            // sass-lint:disable no-vendor-prefixes
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            // sass-lint:enable no-vendor-prefixes
+        }
+    }
+}
+
+// -------------------------------------------------------------------
+// Common/legacy selectors
+// -------------------------------------------------------------------
+
+.type-sharpen {
+    @extend %wpdtrt-scss-type-sharpen;
+}
