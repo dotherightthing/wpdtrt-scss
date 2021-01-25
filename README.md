@@ -27,5 +27,5 @@ npm uninstall wpdtrt-scss
 ```scss
 // wpdtrt-myproject.scss
 
-@import '../node_modules/wpdtrt-scss/extends';
+@import '../node_modules/wpdtrt-scss/scss/extends';
 ```
