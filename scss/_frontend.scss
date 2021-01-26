@@ -15,11 +15,7 @@ input,
 textarea,
 [tabindex='0'] {
     &:focus {
-        @extend %wpdtrt-scss-focus-show;
-
-        &:not(:focus-visible) {
-            @extend %wpdtrt-scss-focus-hide;
-        }
+        @extend %wpdtrt-scss-focus-show; 
     }
 }
 
@@ -33,39 +29,45 @@ textarea,
 // Form
 // -------------------------------------------------------------------
 
-input {
-    &[type='button'],
-    &[type='reset'],
-    &[type='submit'] {
-        &,
-        &[disabled] {
-            @extend %wpdtrt-scss-form-button;
+// button element is handled per project via custom selector
 
-            &:hover,
-            &:focus {
+input {
+    &[id] { // override noramlize
+        &[type='button'],
+        &[type='reset'],
+        &[type='submit'] {
+            &,
+            &[disabled] {
                 @extend %wpdtrt-scss-form-button;
+
+                &:hover,
+                &:focus {
+                    @extend %wpdtrt-scss-form-button;
+                }
             }
         }
-    }
 
-    &[type='date'],
-    &[type='datetime-local'],
-    &[type='email'],
-    &[type='month'],
-    &[type='number'],
-    &[type='password'],
-    &[type='search'],
-    &[type='tel'],
-    &[type='text'],
-    &[type='time'],
-    &[type='url'],
-    &[type='week'] {
-        @extend %wpdtrt-scss-form-textfield;
+        &[type='date'],
+        &[type='datetime-local'],
+        &[type='email'],
+        &[type='month'],
+        &[type='number'],
+        &[type='password'],
+        &[type='search'],
+        &[type='tel'],
+        &[type='text'],
+        &[type='time'],
+        &[type='url'],
+        &[type='week'] {
+            @extend %wpdtrt-scss-form-textfield;
+        }
     }
 }
 
 textarea {
-    @extend %wpdtrt-scss-form-textfield;
+    &[id] { // override noramlize
+        @extend %wpdtrt-scss-form-textfield;
+    }
 }
 
 // -------------------------------------------------------------------

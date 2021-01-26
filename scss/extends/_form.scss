@@ -9,6 +9,9 @@
         &-button {
             background-color: var(--wpdtrt-scss-form-button-bgcolor);
             color: var(--wpdtrt-scss-form-button-color);
+            font-size: .7em;
+            line-height: normal;
+            font-weight: bold;
             text-transform: uppercase;
             padding: 12px;
             border: 0;
@@ -16,44 +19,89 @@
             cursor: pointer;
         }
 
-        &-input-hint-text {
+        &-error {
+            color: var(--wpdtrt-scss-form-error-color);
+            font-weight: normal;
+            border-color: var(--wpdtrt-scss-form-error-color);
+        }
+
+        &-hint {
             display: block;
-            font-size: 13px;
+            font-size: .7em;
+            line-height: 1.25;
             font-style: normal;
-            margin-top: 4px;
+            margin-top: 8px;
+        }
+
+        &-item {
+            // label and input
+            margin-bottom: 32px;
+        }
+
+        &-intro {
+            font-size: .9em;
         }
 
         &-label {
             display: block;
-            margin-bottom: 8px;
+            font-size: .85em;
+            line-height: 1.25;
+            margin-bottom: 10px;
 
             &.error {
                 > .required {
-                    color: var(--color-error);
+                    @extend %wpdtrt-scss-form-error;
                 }
             }
         }
 
+        &-select {
+            font-size: .9em;
+        }
+
         &-textfield {
+            display: block;
             width: 100%;
             background-color: var(--wpdtrt-scss-form-textfield-bgcolor);
+            font-size: .9em;
+            line-height: normal;
             padding: 8px;
             border: 1px solid var(--wpdtrt-scss-form-textfield-bordercolor);
 
             &:focus {
                 background-color: var(--wpdtrt-scss-form-textfield-bgcolor-focus);
             }
+
+            &.error {
+                @extend %wpdtrt-scss-form-error;
+            }
+
+            &.large-text {
+                width: 85%;
+            }
+
+            &.regular-text {
+                width: 350px;
+            }
+
+            &.small-text {
+                width: 50px;
+            }
+
+            &.tiny-text {
+                width: 35px;
+            }
         }
 
         &-validation {
-            display: block;
+            @extend %wpdtrt-scss-form-hint;
 
             strong {
                 font-weight: normal;
             }
 
             > .error {
-                font-weight: normal;
+                @extend %wpdtrt-scss-form-error;
             }
         }
     }

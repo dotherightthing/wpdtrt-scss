@@ -15,7 +15,7 @@
     &__options {
         .form-table {
             .description {
-                @extend %wpdtrt-scss-form-input-hint-text;
+                @extend %wpdtrt-scss-form-hint;
             }
         }
 
@@ -44,9 +44,50 @@
 
     &__widget-field {
         .description {
-            @extend %wpdtrt-scss-form-input-hint-text;
+            @extend %wpdtrt-scss-form-hint;
         }
     }
+}
+
+// -------------------------------------------------------------------
+// Form
+// -------------------------------------------------------------------
+
+// button element is handled per project via custom selector
+
+input {
+    &[type='button'],
+    &[type='reset'],
+    &[type='submit'] {
+        &,
+        &[disabled] {
+            @extend %wpdtrt-scss-form-button;
+
+            &:hover,
+            &:focus {
+                @extend %wpdtrt-scss-form-button;
+            }
+        }
+    }
+
+    &[type='date'],
+    &[type='datetime-local'],
+    &[type='email'],
+    &[type='month'],
+    &[type='number'],
+    &[type='password'],
+    &[type='search'],
+    &[type='tel'],
+    &[type='text'],
+    &[type='time'],
+    &[type='url'],
+    &[type='week'] {
+        @extend %wpdtrt-scss-form-textfield;
+    }
+}
+
+textarea {
+    @extend %wpdtrt-scss-form-textfield;
 }
 
 // -------------------------------------------------------------------
@@ -82,7 +123,7 @@
     // reduce size of help text, to compress custom fields
     p {
         &.help {
-            @extend %wpdtrt-scss-form-input-hint-text;
+            @extend %wpdtrt-scss-form-hint;
         }
     }
 }
