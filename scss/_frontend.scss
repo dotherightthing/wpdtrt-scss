@@ -16,6 +16,10 @@ textarea,
 [tabindex='0'] {
     &:focus {
         @extend %wpdtrt-scss-focus-show;
+
+        &:not(:focus-visible) {
+            @extend %wpdtrt-scss-focus-hide;
+        }
     }
 }
 
