@@ -32,6 +32,7 @@ npm uninstall wpdtrt-scss
 // -------------------------------------------------------------------
 
 @import '../node_modules/wpdtrt-scss/scss/mixins';
+@import '../node_modules/include-media/dist/include-media';
 
 // -------------------------------------------------------------------
 // Variables
@@ -55,6 +56,7 @@ npm uninstall wpdtrt-scss
 // -------------------------------------------------------------------
 
 @import '../node_modules/wpdtrt-scss/scss/mixins';
+@import '../node_modules/include-media/dist/include-media';
 
 // -------------------------------------------------------------------
 // Extends
@@ -83,6 +85,7 @@ npm uninstall wpdtrt-scss
 // -------------------------------------------------------------------
 
 @import '../node_modules/wpdtrt-scss/scss/mixins';
+@import '../node_modules/include-media/dist/include-media';
 
 // -------------------------------------------------------------------
 // Extends
