@@ -1,2 +1,2 @@
-* [e5ae5ec] Docs
-* [9d1ed3e] Migrate and restructure styles
+* [0dd10b8] Migrate and restructure styles
+* [6f51945] Fix update command [ci skip]
