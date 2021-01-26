@@ -1,0 +1,21 @@
+//
+// Mixins: Show
+//
+// @package     WPDTRT_SCSS
+// @since       0.1.0
+//
+
+@mixin wpdtrt-scss-show-in-place {
+    visibility: visible;
+}
+
+@mixin wpdtrt-scss-show-screen {
+    position: relative !important; /* stylelint-disable-line declaration-no-important */
+    top: auto;
+    left: auto;
+    z-index: auto;
+    width: auto;
+    height: auto;
+    clip: auto;
+    overflow: visible;
+}

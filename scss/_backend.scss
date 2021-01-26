@@ -1,24 +1,26 @@
 //
-// Styles for the admin back-end
+// Styles for the Wordpress admin / back-end
 //
 // @package     WPDTRT_SCSS
 // @since       0.1.0
 //
 
-// @imports are handled in the child plugin
-// @import "variables";
-// @import "extends";
+// -------------------------------------------------------------------
+// Styles
+// -------------------------------------------------------------------
 
-// -------------------------------------------------------------------
 // Plugin options page
-// -------------------------------------------------------------------
 
 .wpdtrt-plugin-boilerplate {
+    &__options {
+        .form-table {
+            .description {
+                @extend %wpdtrt-scss-form-input-hint-text;
+            }
+        }
 
-    &--options {
-
-        // restyle WP .spinner
-        .wpdtrt-plugin-boilerplate-ajax-response {
+        .wpdtrt-scss-plugin-ajax-response {
+            // restyle WP .spinner
             .spinner {
                 float: none;
                 width: auto;
@@ -27,40 +29,25 @@
             }
         }
 
-        .wpdtrt-plugin-boilerplate-version {
-            // copied from dashboard-widgets-suite plugin
-            color: var(--wpdtrt-plugin-boilerplate-text-color-version);
-            font-size: 90%;
-        }
-
-        .wpdtrt-plugin-boilerplate-date {
+        .wpdtrt-scss-plugin-date {
             font-size: .95em;
         }
 
-        .form-table {
-            .description {
-                @extend %wpdtrt-plugin-boilerplate-form-input-hint-text;
-            }
+        .wpdtrt-scss-plugin-version {
+            // copied from dashboard-widgets-suite plugin
+            color: var(--color);
+            font-size: 90%;
         }
     }
 
-    // -------------------------------------------------------------------
     // Widget page
-    // -------------------------------------------------------------------
 
-    &--widget-field {
+    &__widget-field {
         .description {
-            @extend %wpdtrt-plugin-boilerplate-form-input-hint-text;
+            @extend %wpdtrt-scss-form-input-hint-text;
         }
     }
-
-    // -------------------------------------------------------------------
-    // Terms page
-    // -------------------------------------------------------------------
-
-    // &--taxonomy-form-field {}
-
-} // end .wpdtrt-plugin-boilerplate
+}
 
 // -------------------------------------------------------------------
 // Attachment page
@@ -68,9 +55,9 @@
 
 // hide unused core fields, to show custom fields sooner
 .attachment-details {
-    > [data-setting='url'],
     > [data-setting='title'],
-    > [data-setting='description'] {
+    > [data-setting='description'],
+    > [data-setting='url'] {
         display: none;
     }
 }
@@ -85,7 +72,7 @@
     table {
         &.compat-attachment-fields {
             padding-top: 5px;
-            border-top: 1px solid var(--wpdtrt-plugin-boilerplate-divider-custom-field);
+            border-top: 1px solid var(--wpdtrt-scss-admin-divider-color);
             margin-top: 15px;
         }
     }
@@ -95,7 +82,7 @@
     // reduce size of help text, to compress custom fields
     p {
         &.help {
-            @extend %wpdtrt-plugin-boilerplate-form-input-hint-text;
+            @extend %wpdtrt-scss-form-input-hint-text;
         }
     }
 }

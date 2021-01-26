@@ -1,15 +1,20 @@
 //
-// SCSS silent @extends (Helpers)
+// SCSS extends
 // This file is imported by other projects
 //
 // @package     WPDTRT_SCSS
 // @since       0.1.0
 //
 
+@import 'extends/attachment';
 @import 'extends/embed';
+@import 'extends/focus';
 @import 'extends/form';
 @import 'extends/hide';
+@import 'extends/img';
 @import 'extends/layout';
+@import 'extends/link';
 @import 'extends/reset';
+@import 'extends/show';
 @import 'extends/type';
-@import 'extends/wp-attachments';
+@import 'extends/viewport';

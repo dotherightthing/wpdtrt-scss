@@ -1,6 +1,164 @@
 //
-// Styles for the front-end (placeholder for wpdtrt-npm-scripts)
+// Styles for the front-end
 //
 // @package     WPDTRT_SCSS
 // @since       0.1.0
 //
+
+// -------------------------------------------------------------------
+// Focus
+// -------------------------------------------------------------------
+
+a,
+button,
+input,
+textarea,
+[tabindex='0'] {
+    &:focus {
+        @extend %wpdtrt-scss-focus-show;
+    }
+}
+
+[tabindex='-1'] {
+    &:focus {
+        @extend %wpdtrt-scss-focus-hide;
+    }
+}
+
+// -------------------------------------------------------------------
+// Form
+// -------------------------------------------------------------------
+
+input {
+    &[type='button'],
+    &[type='reset'],
+    &[type='submit'] {
+        &,
+        &[disabled] {
+            @extend %wpdtrt-scss-form-button;
+
+            &:hover,
+            &:focus {
+                @extend %wpdtrt-scss-form-button;
+            }
+        }
+    }
+
+    &[type='date'],
+    &[type='datetime-local'],
+    &[type='email'],
+    &[type='month'],
+    &[type='number'],
+    &[type='password'],
+    &[type='search'],
+    &[type='tel'],
+    &[type='text'],
+    &[type='time'],
+    &[type='url'],
+    &[type='week'] {
+        @extend %wpdtrt-scss-form-textfield;
+    }
+}
+
+textarea {
+    @extend %wpdtrt-scss-form-textfield;
+}
+
+// -------------------------------------------------------------------
+// Hide
+// -------------------------------------------------------------------
+
+[hidden] {
+    @extend %wpdtrt-scss-hide-all;
+}
+
+// Text meant only for screen readers
+.accessible,
+.says,
+.screen-reader-text {
+    @extend %wpdtrt-scss-hide-screen;
+}
+
+// -------------------------------------------------------------------
+// Image
+// -------------------------------------------------------------------
+
+img {
+    @extend %wpdtrt-scss-img-scale;
+    height: auto;
+    // Make sure images are scaled correctly.
+    // Adhere to container width.
+    vertical-align: middle;
+}
+
+// -------------------------------------------------------------------
+// Layout
+// -------------------------------------------------------------------
+
+.clear {
+    @extend %wpdtrt-scss-layout-clear;
+}
+
+// -------------------------------------------------------------------
+// Link
+// -------------------------------------------------------------------
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    word-wrap: break-word;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: var(--color-link-hover);
+    }
+
+    @media print {
+        // ! overrides color schemes
+        color: var(--color-link) !important; /* stylelint-disable-line declaration-no-important */
+    }
+}
+
+// -------------------------------------------------------------------
+// Media
+// -------------------------------------------------------------------
+
+embed,
+iframe,
+object,
+video {
+    @extend %wpdtrt-scss-img-scale;
+}
+
+// -------------------------------------------------------------------
+// Reset
+// -------------------------------------------------------------------
+
+.list-reset {
+    @extend %wpdtrt-reset-list;
+}
+
+// -------------------------------------------------------------------
+// Type
+// -------------------------------------------------------------------
+
+.type-sharpen {
+    @extend %wpdtrt-scss-type-sharpen;
+}
+
+// -------------------------------------------------------------------
+// Viewport
+// -------------------------------------------------------------------
+
+/* stylelint-disable */
+
+@-ms-viewport {
+    @extend $wpdtrt-scss-viewport;
+}
+
+/* stylelint-enable */
+
+@viewport {
+    @extend $wpdtrt-scss-viewport;
+}

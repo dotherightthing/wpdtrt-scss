@@ -5,29 +5,6 @@
 // @since       0.1.0
 //
 
-// -------------------------------------------------------------------
-// Mixins for use in media queries
-// -------------------------------------------------------------------
-
-@mixin wpdtrt-scss-show-in-place {
-    visibility: visible;
-}
-
-@mixin wpdtrt-scss-show-screen {
-    position: relative !important; /* stylelint-disable-line declaration-no-important */
-    top: auto;
-    left: auto;
-    z-index: auto;
-    width: auto;
-    height: auto;
-    clip: auto;
-    overflow: visible;
-}
-
-// -------------------------------------------------------------------
-// Extends
-// -------------------------------------------------------------------
-
 %wpdtrt-scss {
     &-show {
         &-in-place {

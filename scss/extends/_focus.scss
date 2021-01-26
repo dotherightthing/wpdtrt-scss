@@ -1,0 +1,19 @@
+//
+// Extends: Focus
+//
+// @package     WPDTRT_SCSS
+// @since       0.1.0
+//
+
+%wpdtrt-scss {
+    &-focus {
+        &-hide {
+            outline: none;
+        }
+
+        &-show {
+            outline: 3px solid;
+            outline-offset: 1px;
+        }
+    }
+}

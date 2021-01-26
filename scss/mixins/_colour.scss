@@ -1,0 +1,59 @@
+// @function str-replace
+// Summary: Used by alpha to replace substring with another string
+// Source: https://codyhouse.co/blog/post/how-to-combine-sass-color-functions-and-css-variables
+// Source: https://css-tricks.com/snippets/sass/str-replace-function/
+@function str-replace($string, $search, $replace: '') {
+    $index: str-index($string, $search);
+
+    @if $index {
+        @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    }
+
+    @return $string;
+}
+
+// @function alpha
+// Summary: Return CSS color variable with a different opacity value
+// Source: https://codyhouse.co/blog/post/how-to-combine-sass-color-functions-and-css-variables
+// Example:
+//  .error{
+//      background-color: alpha(var(--color-error), .2);
+//      color: var(--color-error);
+//  }
+//
+// Output:
+//  .error{
+//      background-color: hsla(var(--color-error-h), var(--color-error-s), var(--color-error-l), 0.2);
+//      color: var(--color-error);
+//  }
+@function alpha($color, $opacity) {
+    $color: str-replace($color, 'var(');
+    $color: str-replace($color, ')');
+    $color-h: var(#{$color+'-h'});
+    $color-s: var(#{$color+'-s'});
+    $color-l: var(#{$color+'-l'});
+
+    @return hsla($color-h, $color-s, $color-l, $opacity);
+}
+
+// defineColorHSL
+// Summary: Generate $h, $s and $l variables for use by alpha() function
+// Source: https://codyhouse.co/blog/post/how-to-combine-sass-color-functions-and-css-variables
+// Example:
+//  :root {
+//      @include defineColorHSL(--color-error, 349, 86%, 50%);
+//  }
+//
+// Output:
+//  :root {
+//      --color-error: hsl(349, 86%, 50%);
+//      --color-error-h: 349;
+//      --color-error-s: 86%;
+//      --color-error-l: 50%;
+//  }
+@mixin defineColorHSL($color, $hue, $saturation, $lightness) {
+    #{$color}: unquote('hsl(#{$hue}, #{$saturation}, #{$lightness})');
+    #{$color}-h: #{$hue};
+    #{$color}-s: #{$saturation};
+    #{$color}-l: #{$lightness};
+}

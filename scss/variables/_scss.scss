@@ -4,3 +4,22 @@
 // @package     WPDTRT_SCSS
 // @since       0.1.0
 //
+
+// -------------------------------------------------------------------
+// Breakpoints
+// see: https://gist.github.com/dotherightthing/06f33bf784279aa24072e0b6873c968c
+// see: https://include-media.com/
+//
+// Usage: @include media(">phone", "<=tablet") { ... }
+// Usage: @include media("<=1150px") { ... }
+// -------------------------------------------------------------------
+
+@import '../../node_modules/include-media/dist/include-media';
+
+$breakpoints: (
+    phone: 320px,
+    phone_large: 400px,
+    tablet_small: 550px,
+    tablet: 710px,
+    desktop: 910px
+);

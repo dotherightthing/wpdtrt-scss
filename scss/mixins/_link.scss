@@ -1,0 +1,24 @@
+//
+// Mixin: Link
+//
+// @package     WPDTRT_SCSS
+// @since       0.1.0
+//
+
+@mixin link-underline($target) {
+    box-shadow: 0 2px 0 0 transparent;
+
+    @at-root #{$target}:hover {
+        color: var(--color-link-hover);
+        box-shadow: 0 2px 0 0 currentColor;
+    }
+
+    @at-root a:hover #{$target} {
+        color: var(--color-link-hover);
+        box-shadow: 0 2px 0 0 currentColor;
+    }
+}
+
+@mixin link-underline-remove($target) {
+    box-shadow: 0 0 0 0 transparent;
+}
