@@ -1,11 +1,13 @@
 //
 // CSS variables
+// These can be overridden in the consuming project
 //
 // @package     WPDTRT_SCSS
 // @since       0.1.0
 //
 
 :root {
+    --wpdtrt-scss-focus-color-outline: hsla(0, 0%, 0%, 1);
     --wpdtrt-scss-admin-divider-color: hsla(0, 0%, 87%, 1);
     --wpdtrt-scss-plugin-version-color: hsla(0, 0%, 78%, 1);
 }
