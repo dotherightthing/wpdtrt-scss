@@ -8,6 +8,11 @@
 
 :root {
     --wpdtrt-scss-focus-color-outline: hsla(0, 0%, 0%, 1);
+    --wpdtrt-scss-form-button-bgcolor: hsla(0, 0%, 10%, 1);
+    --wpdtrt-scss-form-button-color: hsla(0, 0%, 100%, 1);
+    --wpdtrt-scss-form-textfield-bgcolor: hsla(0, 0%, 97%, 1);
+    --wpdtrt-scss-form-textfield-bgcolor-focus: hsla(0, 0%, 100%, 1);
+    --wpdtrt-scss-form-textfield-bordercolor: hsla(0, 0%, 82%, 1);
     --wpdtrt-scss-admin-divider-color: hsla(0, 0%, 87%, 1);
     --wpdtrt-scss-plugin-version-color: hsla(0, 0%, 78%, 1);
 }
