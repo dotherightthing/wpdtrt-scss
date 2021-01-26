@@ -19,3 +19,7 @@
     clip: auto;
     overflow: visible;
 }
+
+@mixin wpdtrt-scss-show-visually {
+    @include wpdtrt-scss-show-screen;
+}

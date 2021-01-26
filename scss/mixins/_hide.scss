@@ -22,3 +22,7 @@
     word-wrap: normal !important; /* stylelint-disable-line declaration-no-important */
     overflow: hidden;
 }
+
+@mixin wpdtrt-scss-hide-visually {
+    @include wpdtrt-scss-hide-screen;
+}
