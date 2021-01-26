@@ -1,2 +1,2 @@
-* [e98f023] Specify version in installation, to allow npm update
-* [955e814] Fix import path
+* [1428d3f] Bump version
+* [4a9cf8a] Migrate and restructure styles
