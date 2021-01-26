@@ -13,7 +13,7 @@ npm install github:dotherightthing/wpdtrt-scss#semver:* --save
 ## Update
 
 ```node
-npm update wpdtrt-scss
+npm install github:dotherightthing/wpdtrt-scss#semver:* --save
 ```
 
 ## Uninstallation
