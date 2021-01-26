@@ -7,7 +7,7 @@ SCSS mixins and extends for shared theming across projects.
 ## Installation
 
 ```node
-npm install dotherightthing/wpdtrt-scss --save
+npm install dotherightthing/wpdtrt-scss#semver:0.1.* --save
 ```
 
 ## Update
