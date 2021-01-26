@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "wpdtrt-scss",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "SCSS mixins and extends for shared theming across projects.",
   "keywords": [
     "SCSS",
