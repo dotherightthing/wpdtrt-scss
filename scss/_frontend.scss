@@ -154,11 +154,11 @@ video {
 /* stylelint-disable */
 
 @-ms-viewport {
-    @extend $wpdtrt-scss-viewport;
+    @include wpdtrt-scss-viewport;
 }
 
 /* stylelint-enable */
 
 @viewport {
-    @extend $wpdtrt-scss-viewport;
+    @include wpdtrt-scss-viewport;
 }

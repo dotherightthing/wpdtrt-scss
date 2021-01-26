@@ -1,5 +1,5 @@
 //
-// Extends: Viewport
+// Mixins: Viewport
 //
 // @package     WPDTRT_SCSS
 // @since       0.1.0
@@ -10,8 +10,6 @@
 // render responsive styling in Windows 8 "snapped" views; IE10+ does not honor
 // the meta tag. See https://core.trac.wordpress.org/ticket/25888.
 
-%wpdtrt-scss {
-    &-viewport {
-        width: device-width;
-    }
+@mixin wpdtrt-scss-viewport {
+    width: device-width;
 }
