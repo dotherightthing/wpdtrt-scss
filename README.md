@@ -28,10 +28,16 @@ npm uninstall wpdtrt-scss
 
 ```scss
 // -------------------------------------------------------------------
+// Mixins
+// -------------------------------------------------------------------
+
+@import '../node_modules/wpdtrt-scss/scss/mixins';
+
+// -------------------------------------------------------------------
 // Variables
 // -------------------------------------------------------------------
 
-@import '../node_modules/wpdtrt-scss/variables/css';
+@import '../node_modules/wpdtrt-scss/scss/variables/css';
 @import 'variables/css';
 ```
 
