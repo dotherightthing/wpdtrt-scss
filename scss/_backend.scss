@@ -56,20 +56,6 @@
 // button element is handled per project via custom selector
 
 input {
-    &[type='button'],
-    &[type='reset'],
-    &[type='submit'] {
-        &,
-        &[disabled] {
-            @extend %wpdtrt-scss-form-button;
-
-            &:hover,
-            &:focus {
-                @extend %wpdtrt-scss-form-button;
-            }
-        }
-    }
-
     &[type='date'],
     &[type='datetime-local'],
     &[type='email'],
@@ -82,12 +68,12 @@ input {
     &[type='time'],
     &[type='url'],
     &[type='week'] {
-        @extend %wpdtrt-scss-form-textfield;
+        @extend %wpdtrt-scss-form-textfield-sizes;
     }
 }
 
 textarea {
-    @extend %wpdtrt-scss-form-textfield;
+    @extend %wpdtrt-scss-form-textfield-sizes;
 }
 
 // -------------------------------------------------------------------

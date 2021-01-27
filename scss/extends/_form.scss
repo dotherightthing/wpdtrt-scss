@@ -75,7 +75,9 @@
             &.error {
                 @extend %wpdtrt-scss-form-error;
             }
+        }
 
+        &-textfield-sizes {
             &.large-text {
                 width: 85%;
             }
