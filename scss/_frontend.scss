@@ -15,7 +15,7 @@ input,
 textarea,
 [tabindex='0'] {
     &:focus {
-        @extend %wpdtrt-scss-focus-show; 
+        @extend %wpdtrt-scss-focus-show;
     }
 }
 
