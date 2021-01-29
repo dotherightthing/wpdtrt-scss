@@ -15,22 +15,6 @@
 
 .wpdtrt-plugin-boilerplate {
     &__options {
-        .form-table {
-            .description {
-                @extend %wpdtrt-scss-form-hint;
-            }
-        }
-
-        .wpdtrt-scss-plugin-ajax-response {
-            // restyle WP .spinner
-            .spinner {
-                float: none;
-                width: auto;
-                padding-left: 27px;
-                margin-left: 0;
-            }
-        }
-
         .wpdtrt-scss-plugin-date {
             font-size: .95em;
         }
@@ -39,79 +23,6 @@
             // copied from dashboard-widgets-suite plugin
             color: var(--wpdtrt-scss-plugin-version-color);
             font-size: 90%;
-        }
-    }
-
-    // Widget page
-
-    &__widget-field {
-        .description {
-            @extend %wpdtrt-scss-form-hint;
-        }
-    }
-}
-
-// -------------------------------------------------------------------
-// Form
-// -------------------------------------------------------------------
-
-// button element is handled per project via custom selector
-
-input {
-    &[type='date'],
-    &[type='datetime-local'],
-    &[type='email'],
-    &[type='month'],
-    &[type='number'],
-    &[type='password'],
-    &[type='search'],
-    &[type='tel'],
-    &[type='text'],
-    &[type='time'],
-    &[type='url'],
-    &[type='week'] {
-        @extend %wpdtrt-scss-form-textfield-sizes;
-    }
-}
-
-textarea {
-    @extend %wpdtrt-scss-form-textfield-sizes;
-}
-
-// -------------------------------------------------------------------
-// Attachment page
-// -------------------------------------------------------------------
-
-// hide unused core fields, to show custom fields sooner
-.attachment-details {
-    > [data-setting='title'],
-    > [data-setting='description'],
-    > [data-setting='url'] {
-        display: none;
-    }
-}
-
-// hide redundant warning, to show custom fields sooner
-.media-types-required-info {
-    display: none;
-}
-
-// create a visual separator before the custom fields
-.compat-item {
-    table {
-        &.compat-attachment-fields {
-            padding-top: 5px;
-            border-top: 1px solid var(--wpdtrt-scss-admin-divider-color);
-            margin-top: 15px;
-        }
-    }
-}
-
-.compat-attachment-fields {
-    // reduce size of help text, to compress custom fields
-    p {
-        &.help {
-            @extend %wpdtrt-scss-form-hint;
         }
     }
 }
