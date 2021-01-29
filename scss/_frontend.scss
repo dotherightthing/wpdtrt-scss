@@ -32,51 +32,6 @@ textarea,
 }
 
 // -------------------------------------------------------------------
-// Form
-// -------------------------------------------------------------------
-
-// button element is handled per project via custom selector
-
-input {
-    &[id] { // override noramlize
-        &[type='button'],
-        &[type='reset'],
-        &[type='submit'] {
-            &,
-            &[disabled] {
-                @extend %wpdtrt-scss-form-button;
-
-                &:hover,
-                &:focus {
-                    @extend %wpdtrt-scss-form-button;
-                }
-            }
-        }
-
-        &[type='date'],
-        &[type='datetime-local'],
-        &[type='email'],
-        &[type='month'],
-        &[type='number'],
-        &[type='password'],
-        &[type='search'],
-        &[type='tel'],
-        &[type='text'],
-        &[type='time'],
-        &[type='url'],
-        &[type='week'] {
-            @extend %wpdtrt-scss-form-textfield;
-        }
-    }
-}
-
-textarea {
-    &[id] { // override noramlize
-        @extend %wpdtrt-scss-form-textfield;
-    }
-}
-
-// -------------------------------------------------------------------
 // Hide
 // -------------------------------------------------------------------
 
