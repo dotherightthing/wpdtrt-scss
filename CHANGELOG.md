@@ -1,2 +1,1 @@
-* [2a21951] Relocate form styles to wpdtrt-forms
-* [e9fceeb] Docs [ci skip]
+* [5fd6c5f] Relocate form styles to wpdtrt-forms
