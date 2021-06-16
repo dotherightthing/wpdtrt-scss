@@ -15,19 +15,13 @@ a,
 button,
 input,
 textarea,
-[tabindex='0'] {
+[tabindex] {
     &:focus {
         @extend %wpdtrt-scss-focus-show;
 
         &:not(:focus-visible) {
             @extend %wpdtrt-scss-focus-hide;
         }
-    }
-}
-
-[tabindex='-1'] {
-    &:focus {
-        @extend %wpdtrt-scss-focus-hide;
     }
 }
 
