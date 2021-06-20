@@ -1,1 +1,1 @@
-* [2e703a2] Retain focus outline on programmatically focussed elements when navigating via keyboard (fixes #2)
+* [c48d5df] Convert embed extend into a mixin so that correct proportion can be determined based on width and height of container
