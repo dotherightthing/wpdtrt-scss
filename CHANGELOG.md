@@ -1,1 +1,1 @@
-* [d8db4fe] Add focus-visible polyfill for older Safari (#2)
+* [1198a8f] Create a separate rule to ease debugging in Safari
