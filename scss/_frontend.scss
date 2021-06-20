@@ -24,7 +24,7 @@ textarea,
         }
 
         .js-focus-visible &:not(.focus-visible) {
-            @extend %wpdtrt-scss-focus-hide;
+            @extend %wpdtrt-scss-focus-hide-polyfill;
         }
     }
 }
