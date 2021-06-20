@@ -19,7 +19,8 @@ textarea,
     &:focus {
         @extend %wpdtrt-scss-focus-show;
 
-        &:not(:focus-visible) {
+        .no-js &:not(:focus-visible),
+        .js-focus-visible &:not(.focus-visible) {
             @extend %wpdtrt-scss-focus-hide;
         }
     }

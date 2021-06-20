@@ -149,3 +149,11 @@ npm uninstall wpdtrt-scss
 @import '../node_modules/wpdtrt-scss/scss/variables/css';
 @import 'variables/css';
 ```
+
+### wpdtrt-themename/js/frontend.txt
+
+1. Import `:focus-visible` polyfill for older Safari, see [#2](https://github.com/dotherightthing/wpdtrt-scss/issues/2)
+
+```txt
+./node_modules/focus-visible/dist/focus-visible.min.js
+```
