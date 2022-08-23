@@ -126,6 +126,7 @@ npm uninstall wpdtrt-scss
 // Styles (Optional)
 // -------------------------------------------------------------------
 
+// Optionally import frontend styles (in theme only to prevent conflicts)
 @import '../node_modules/wpdtrt-scss/scss/_frontend';
 ```
 
