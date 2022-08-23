@@ -46,7 +46,7 @@
   "homepage": "https://github.com/dotherightthing/wpdtrt-scss",
   "srcDir": "/Volumes/DanBackup/Websites/wpdtrt-scss",
   "devDependencies": {
-    "wpdtrt-npm-scripts": "github:dotherightthing/wpdtrt-npm-scripts#semver:0.3.*"
+    "wpdtrt-npm-scripts": "github:dotherightthing/wpdtrt-npm-scripts#semver:*"
   },
   "dependencies": {
     "focus-visible": "^5.2.0",
