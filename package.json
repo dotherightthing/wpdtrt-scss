@@ -50,6 +50,6 @@
   },
   "dependencies": {
     "focus-visible": "^5.2.0",
-    "include-media": "^1.4.9"
+    "include-media": "github:eduardoboucas/include-media#2.0-release"
   }
 }
