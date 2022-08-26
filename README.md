@@ -43,10 +43,10 @@ npm uninstall wpdtrt-scss
 @use 'variables/scss' as *;
 
 // Extend default `$breakpoint` map from library variables
-$breakpoints: map-merge($wpdtrt-scss-breakpoints, $breakpoints);
+$breakpoints: map-merge($breakpoints, $wpdtrt-scss-breakpoints);
 
 // Extend default `$breakpoint` map from local variables (optional)
-$breakpoints: map-merge($local-breakpoints, $breakpoints);
+$breakpoints: map-merge($breakpoints, $local-breakpoints);
 
 // Add theme styling (as required)
 ```
