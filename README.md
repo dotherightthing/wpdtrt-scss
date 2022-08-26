@@ -40,7 +40,7 @@ npm uninstall wpdtrt-scss
 @use '../node_modules/wpdtrt-scss/scss/_frontend';
 
 // Import local variables
-@use 'variables/scss';
+@use 'variables/scss' as *;
 
 // Extend default `$breakpoint` map from library variables
 $breakpoints: map-merge($wpdtrt-scss-breakpoints, $breakpoints);
@@ -65,7 +65,7 @@ $breakpoints: map-merge($local-breakpoints, $breakpoints);
 @use '../node_modules/wpdtrt-scss/scss/variables/css';
 
 // Import local variables
-@import 'variables/css';
+@import 'variables/css' as *;
 ```
 
 ### wpdtrt-themename/js/frontend.txt
