@@ -1,8 +1,6 @@
 //
 // SCSS variables
 //
-// Usage: @use '../node_modules/wpdtrt-scss/scss/variables/scss' as commonVariables;
-//
 // @package     WPDTRT_SCSS
 // @since       0.1.0
 //
@@ -36,8 +34,6 @@
 //  MacbookPro 15" external monitor 2560x1440
 //
 // -------------------------------------------------------------------
-
-@use '../../../../node_modules/include-media/dist/include-media';
 
 $breakpoints: (
     phone: 320px,

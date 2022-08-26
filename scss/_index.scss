@@ -1,0 +1,38 @@
+//
+// SCSS helpers
+//
+// Theme + Plugin usage:
+// @use '../node_modules/wpdtrt-scss/scss';
+// @include wpdtrt-scss-mixinname()
+// @extend  %wpdtrt-scss-extendname;
+// prop: $wpdtrt-scss-varname;
+//
+// @package     WPDTRT_SCSS
+// @since       0.1.0
+//
+
+// Variables
+
+@forward 'variables/scss' as wpdtrt-scss-*;
+
+// Mixins
+
+@forward 'mixins/colour' as wpdtrt-scss-*;
+@forward 'mixins/embed' as wpdtrt-scss-*;
+@forward 'mixins/hide' as wpdtrt-scss-*;
+@forward 'mixins/link' as wpdtrt-scss-*;
+@forward 'mixins/show' as wpdtrt-scss-*;
+@forward 'mixins/type' as wpdtrt-scss-*;
+@forward 'mixins/viewport' as wpdtrt-scss-*;
+
+// Extends
+
+@forward 'extends/attachment' as wpdtrt-scss-*;
+@forward 'extends/focus' as wpdtrt-scss-*;
+@forward 'extends/hide' as wpdtrt-scss-*;
+@forward 'extends/img' as wpdtrt-scss-*;
+@forward 'extends/layout' as wpdtrt-scss-*;
+@forward 'extends/link' as wpdtrt-scss-*;
+@forward 'extends/reset' as wpdtrt-scss-*;
+@forward 'extends/show' as wpdtrt-scss-*;
+@forward 'extends/type' as wpdtrt-scss-*;

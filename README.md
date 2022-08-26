@@ -24,179 +24,48 @@ npm uninstall wpdtrt-scss
 
 ## Usage
 
-### wpdtrt-themename/scss/wpdtrt-themename-backend.scss
-
-1. Import `$breakpoint` map (for use with `@include media`)
-1. Import theme variables
-1. Import `@mixin` helpers (for optional use)
-1. Import `@extend` helpers (for optional use)
-1. Import backend styling (for use by any plugin built with `generator-wpdtrt-plugin-boilerplate`)
-1. Add any theme styling as required
+### wpdtrt-themename-backend.scss / wpdtrt-themename.scss / wpdtrt-pluginname/scss/backend.scss / wpdtrt-pluginname/scss/frontend.scss
 
 ```scss
-// -------------------------------------------------------------------
-// Variables
-// -------------------------------------------------------------------
+// Import wpdtrt-scss library helpers (prefixed with `wpdtrt-scss-`)
+@use '../node_modules/wpdtrt-scss/scss';
 
-@use '../node_modules/wpdtrt-scss/scss/variables/scss' as commonVariables;
-@use 'variables/scss' as localVariables;
+// Import `include media` library (including default `$breakpoint` map)
+@use '../node_modules/include-media/dist/include-media' as *;
 
-// -------------------------------------------------------------------
-// Mixins
-// -------------------------------------------------------------------
-
-@use '../node_modules/wpdtrt-scss/scss/mixins/colour';
-@use '../node_modules/wpdtrt-scss/scss/mixins/embed';
-@use '../node_modules/wpdtrt-scss/scss/mixins/hide';
-@use '../node_modules/wpdtrt-scss/scss/mixins/link';
-@use '../node_modules/wpdtrt-scss/scss/mixins/show';
-@use '../node_modules/wpdtrt-scss/scss/mixins/type';
-@use '../node_modules/wpdtrt-scss/scss/mixins/viewport';
-
-// -------------------------------------------------------------------
-// Extends
-// -------------------------------------------------------------------
-
-@use '../node_modules/wpdtrt-scss/scss/extends/attachment';
-@use '../node_modules/wpdtrt-scss/scss/extends/focus';
-@use '../node_modules/wpdtrt-scss/scss/extends/hide';
-@use '../node_modules/wpdtrt-scss/scss/extends/img';
-@use '../node_modules/wpdtrt-scss/scss/extends/layout';
-@use '../node_modules/wpdtrt-scss/scss/extends/link';
-@use '../node_modules/wpdtrt-scss/scss/extends/reset';
-@use '../node_modules/wpdtrt-scss/scss/extends/show';
-@use '../node_modules/wpdtrt-scss/scss/extends/type';
-
-// -------------------------------------------------------------------
-// Styles
-// -------------------------------------------------------------------
-
+// Import _backend styles (if backend stylesheet, optional)
 @use '../node_modules/wpdtrt-scss/scss/_backend';
+
+// Import _frontend styles (if frontend stylesheet - but only in theme to prevent conflicts, optional)
+@use '../node_modules/wpdtrt-scss/scss/_frontend';
+
+// Import local variables
+@use 'variables/scss';
+
+// Extend default `$breakpoint` map from library variables
+$breakpoints: map-merge($wpdtrt-scss-breakpoints, $breakpoints);
+
+// Extend default `$breakpoint` map from local variables (optional)
+$breakpoints: map-merge($local-breakpoints, $breakpoints);
+
+// Add theme styling (as required)
 ```
 
-### wpdtrt-pluginname/scss/backend.scss
-
-1. Import `$breakpoint` map (for use with `@include media`)
-1. Import theme variables
-1. Import `@mixin` helpers (for optional use)
-1. Import `@extend` helpers (for optional use)
-1. Add any plugin styling as required
-
-```scss
-// -------------------------------------------------------------------
-// Variables
-// -------------------------------------------------------------------
-
-@use '../node_modules/wpdtrt-scss/scss/variables/scss' as commonVariables;
-@use 'variables/scss' as localVariables;
-
-// -------------------------------------------------------------------
-// Mixins
-// -------------------------------------------------------------------
-
-@use '../node_modules/wpdtrt-scss/scss/mixins/colour';
-@use '../node_modules/wpdtrt-scss/scss/mixins/embed';
-@use '../node_modules/wpdtrt-scss/scss/mixins/hide';
-@use '../node_modules/wpdtrt-scss/scss/mixins/link';
-@use '../node_modules/wpdtrt-scss/scss/mixins/show';
-@use '../node_modules/wpdtrt-scss/scss/mixins/type';
-@use '../node_modules/wpdtrt-scss/scss/mixins/viewport';
-
-// -------------------------------------------------------------------
-// Extends
-// -------------------------------------------------------------------
-
-@use '../node_modules/wpdtrt-scss/scss/extends/attachment';
-@use '../node_modules/wpdtrt-scss/scss/extends/focus';
-@use '../node_modules/wpdtrt-scss/scss/extends/hide';
-@use '../node_modules/wpdtrt-scss/scss/extends/img';
-@use '../node_modules/wpdtrt-scss/scss/extends/layout';
-@use '../node_modules/wpdtrt-scss/scss/extends/link';
-@use '../node_modules/wpdtrt-scss/scss/extends/reset';
-@use '../node_modules/wpdtrt-scss/scss/extends/show';
-@use '../node_modules/wpdtrt-scss/scss/extends/type';
-
-// -------------------------------------------------------------------
-// Styles (Optional)
-// -------------------------------------------------------------------
-
-```
-
-### wpdtrt-themename/scss/wpdtrt-themename.scss / wpdtrt-pluginname/scss/frontend.scss
-
-1. Import `$breakpoint` map (for use with `@include media`)
-1. Import theme or plugin variables
-1. Import `@mixin` helpers (for optional use)
-1. Import `@extend` helpers (for optional use)
-1. Optionally import frontend styles (which apply extends to common elements)
-
-```scss
-// -------------------------------------------------------------------
-// Variables
-// -------------------------------------------------------------------
-
-@use '../node_modules/wpdtrt-scss/scss/variables/scss' as commonVariables;
-@use 'variables/scss' as localVariables;
-
-// -------------------------------------------------------------------
-// Mixins
-// -------------------------------------------------------------------
-
-@use '../node_modules/wpdtrt-scss/scss/mixins/colour';
-@use '../node_modules/wpdtrt-scss/scss/mixins/embed';
-@use '../node_modules/wpdtrt-scss/scss/mixins/hide';
-@use '../node_modules/wpdtrt-scss/scss/mixins/link';
-@use '../node_modules/wpdtrt-scss/scss/mixins/show';
-@use '../node_modules/wpdtrt-scss/scss/mixins/type';
-@use '../node_modules/wpdtrt-scss/scss/mixins/viewport';
-
-// -------------------------------------------------------------------
-// Extends
-// -------------------------------------------------------------------
-
-@use '../node_modules/wpdtrt-scss/scss/extends/attachment';
-@use '../node_modules/wpdtrt-scss/scss/extends/focus';
-@use '../node_modules/wpdtrt-scss/scss/extends/hide';
-@use '../node_modules/wpdtrt-scss/scss/extends/img';
-@use '../node_modules/wpdtrt-scss/scss/extends/layout';
-@use '../node_modules/wpdtrt-scss/scss/extends/link';
-@use '../node_modules/wpdtrt-scss/scss/extends/reset';
-@use '../node_modules/wpdtrt-scss/scss/extends/show';
-@use '../node_modules/wpdtrt-scss/scss/extends/type';
-
-// -------------------------------------------------------------------
-// Styles (Optional)
-// -------------------------------------------------------------------
-
-// Optionally import frontend styles (in theme only to prevent conflicts)
-@use '../node_modules/wpdtrt-scss/scss/_frontend' as commonFrontend;
-```
-
-### wpdtrt-themename/scss/wpdtrt-themename-variables.scss
+### wpdtrt-themename-variables.scss
 
 1. Optionally import `@mixin` helpers (for use of `defineColorHSL` in `wpdtrt-themename/scss/variables/css`)
 2. Import CSS Custom Properties (to bundle backend variables with frontend variables)
 3. Import theme frontend variables
 
 ```scss
-// -------------------------------------------------------------------
-// Mixins
-// -------------------------------------------------------------------
+// Import wpdtrt-scss library helpers (prefixed with `wpdtrt-scss-`, optional - mainly for use of `defineColorHSL`)
+@use '../node_modules/wpdtrt-scss/scss';
 
-@use '../node_modules/wpdtrt-scss/scss/mixins/colour';
-@use '../node_modules/wpdtrt-scss/scss/mixins/embed';
-@use '../node_modules/wpdtrt-scss/scss/mixins/hide';
-@use '../node_modules/wpdtrt-scss/scss/mixins/link';
-@use '../node_modules/wpdtrt-scss/scss/mixins/show';
-@use '../node_modules/wpdtrt-scss/scss/mixins/type';
-@use '../node_modules/wpdtrt-scss/scss/mixins/viewport';
+// Import CSS Custom Properties (to bundle backend variables with frontend variables)
+@use '../node_modules/wpdtrt-scss/scss/variables/css';
 
-// -------------------------------------------------------------------
-// Variables
-// -------------------------------------------------------------------
-
-@use '../node_modules/wpdtrt-scss/scss/variables/css' as commonCssVariables;
-@use '../node_modules/wpdtrt-scss/scss/variables/css' as localCssVariables;
+// Import local variables
+@import 'variables/css';
 ```
 
 ### wpdtrt-themename/js/frontend.txt
