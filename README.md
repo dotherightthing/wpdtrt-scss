@@ -27,8 +27,8 @@ npm uninstall wpdtrt-scss
 ### wpdtrt-themename-backend.scss / wpdtrt-themename.scss / wpdtrt-pluginname/scss/backend.scss / wpdtrt-pluginname/scss/frontend.scss
 
 ```scss
-// Import wpdtrt-scss library helpers (prefixed with `wpdtrt-scss-`)
-@use '../node_modules/wpdtrt-scss/scss/index';
+// Import wpdtrt-scss library helpers
+@use '../node_modules/wpdtrt-scss/scss' as wpdtrt-scss;
 
 // Import `include media` library (including default `$breakpoint` map)
 @use '../node_modules/include-media/dist/include-media' as *;
@@ -43,7 +43,7 @@ npm uninstall wpdtrt-scss
 @use 'variables/scss' as *;
 
 // Extend default `$breakpoint` map from library variables
-$breakpoints: map-merge($breakpoints, index.$wpdtrt-scss-breakpoints);
+$breakpoints: map-merge($breakpoints, wpdtrt-scss.$breakpoints);
 
 // Extend default `$breakpoint` map from local variables (optional)
 $breakpoints: map-merge($breakpoints, $local-breakpoints);
@@ -58,8 +58,8 @@ $breakpoints: map-merge($breakpoints, $local-breakpoints);
 3. Import theme frontend variables
 
 ```scss
-// Import wpdtrt-scss library helpers (prefixed with `wpdtrt-scss-`, optional - mainly for use of `defineColorHSL`)
-@use '../node_modules/wpdtrt-scss/scss/index';
+// Import wpdtrt-scss library helpers (optional - mainly for use of `defineColorHSL`)
+@use '../node_modules/wpdtrt-scss/scss' as wpdtrt-scss;
 
 // Import CSS Custom Properties (to bundle backend variables with frontend variables)
 @use '../node_modules/wpdtrt-scss/scss/variables/css';
