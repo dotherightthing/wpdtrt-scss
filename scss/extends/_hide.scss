@@ -5,20 +5,22 @@
 // @since       0.1.0
 //
 
+@use '../mixins/hide';
+
 %hide {
     &-all {
-        @include wpdtrt-scss-hide-all;
+        @include hide.hide-all;
     }
 
     &-in-place {
-        @include wpdtrt-scss-hide-in-place;
+        @include hide.hide-in-place;
     }
 
     &-screen {
-        @include wpdtrt-scss-hide-screen;
+        @include hide.hide-screen;
     }
 
     &-visually {
-        @include wpdtrt-scss-hide-screen;
+        @include hide.hide-screen;
     }
 }

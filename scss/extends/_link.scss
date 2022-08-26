@@ -5,12 +5,14 @@
 // @since       0.1.0
 //
 
+@use '../mixins/link';
+
 %link {
     &-underline {
-        @include link-underline(&);
+        @include link.link-underline(&);
     }
 
     &-underline-remove {
-        @include link-underline-remove(&);
+        @include link.link-underline-remove(&);
     }
 }

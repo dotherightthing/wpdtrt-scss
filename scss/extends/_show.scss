@@ -5,16 +5,18 @@
 // @since       0.1.0
 //
 
+@use '../mixins/show';
+
 %show {
     &-in-place {
-        @include wpdtrt-scss-show-in-place;
+        @include show.show-in-place;
     }
 
     &-screen {
-        @include wpdtrt-scss-show-screen;
+        @include show.show-screen;
     }
 
     &-visually {
-        @include wpdtrt-scss-show-screen;
+        @include show.show-screen;
     }
 }
