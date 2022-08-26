@@ -9,7 +9,7 @@
 // Mixins
 // -------------------------------------------------------------------
 
-@mixin wpdtrt-scss-type-outline($color-var) {
+@mixin type-outline($color-var) {
     text-shadow: /* stylelint-disable-line declaration-colon-after-space */
         -1px -1px 0 var($color-var),
         1px -1px 0 var($color-var),

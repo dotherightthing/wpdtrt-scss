@@ -5,15 +5,15 @@
 // @since       0.1.0
 //
 
-@mixin wpdtrt-scss-hide-all {
+@mixin hide-all {
     display: none;
 }
 
-@mixin wpdtrt-scss-hide-in-place {
+@mixin hide-in-place {
     visibility: hidden;
 }
 
-@mixin wpdtrt-scss-hide-screen {
+@mixin hide-screen {
     position: absolute !important; /* stylelint-disable-line declaration-no-important */
     width: 1px;
     height: 1px;
@@ -23,6 +23,6 @@
     overflow: hidden;
 }
 
-@mixin wpdtrt-scss-hide-visually {
-    @include wpdtrt-scss-hide-screen;
+@mixin hide-visually {
+    @include screen;
 }

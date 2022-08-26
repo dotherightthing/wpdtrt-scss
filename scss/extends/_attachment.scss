@@ -6,12 +6,10 @@
 //
 
 // add a divider after the last attachment field added by a plugin
-%wpdtrt-scss {
-    &-attachment {
-        &-field-divider-last {
-            padding-bottom: 5px;
-            border-bottom: 1px solid var(--wpdtrt-scss-admin-divider-color);
-            margin-bottom: 15px;
-        }
+%attachment {
+    &-field-divider-last {
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--wpdtrt-scss-admin-divider-color);
+        margin-bottom: 15px;
     }
 }

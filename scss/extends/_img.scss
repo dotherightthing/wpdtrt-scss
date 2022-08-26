@@ -5,14 +5,12 @@
 // @since       0.1.0
 //
 
-%wpdtrt-scss {
-    &-img {
-        &-linked {
-            display: block;
-        }
+%img {
+    &-linked {
+        display: block;
+    }
 
-        &-scale {
-            max-width: 100%; // Make sure embeds and iframes fit their containers.
-        }
+    &-scale {
+        max-width: 100%; // Make sure embeds and iframes fit their containers.
     }
 }

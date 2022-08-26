@@ -5,18 +5,16 @@
 // @since       0.1.0
 //
 
-%wpdtrt-scss {
-    &-show {
-        &-in-place {
-            @include wpdtrt-scss-show-in-place;
-        }
+%show {
+    &-in-place {
+        @include wpdtrt-scss-show-in-place;
+    }
 
-        &-screen {
-            @include wpdtrt-scss-show-screen;
-        }
+    &-screen {
+        @include wpdtrt-scss-show-screen;
+    }
 
-        &-visually {
-            @include wpdtrt-scss-show-screen;
-        }
+    &-visually {
+        @include wpdtrt-scss-show-screen;
     }
 }

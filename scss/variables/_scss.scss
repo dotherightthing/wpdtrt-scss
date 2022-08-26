@@ -1,7 +1,7 @@
 //
 // SCSS variables
 //
-// Usage: @import '../node_modules/wpdtrt-scss/scss/variables/scss';
+// Usage: @use '../node_modules/wpdtrt-scss/scss/variables/scss' as commonVariables;
 //
 // @package     WPDTRT_SCSS
 // @since       0.1.0
@@ -37,7 +37,7 @@
 //
 // -------------------------------------------------------------------
 
-@import '../../../../node_modules/include-media/dist/include-media';
+@use '../../../../node_modules/include-media/dist/include-media';
 
 $breakpoints: (
     phone: 320px,

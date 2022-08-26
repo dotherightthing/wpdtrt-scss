@@ -5,14 +5,12 @@
 // @since       0.1.0
 //
 
-%wpdtrt-scss {
-    &-link {
-        &-underline {
-            @include link-underline(&);
-        }
+%link {
+    &-underline {
+        @include link-underline(&);
+    }
 
-        &-underline-remove {
-            @include link-underline-remove(&);
-        }
+    &-underline-remove {
+        @include link-underline-remove(&);
     }
 }

@@ -5,22 +5,20 @@
 // @since       0.1.0
 //
 
-%wpdtrt-scss {
-    &-hide {
-        &-all {
-            @include wpdtrt-scss-hide-all;
-        }
+%hide {
+    &-all {
+        @include wpdtrt-scss-hide-all;
+    }
 
-        &-in-place {
-            @include wpdtrt-scss-hide-in-place;
-        }
+    &-in-place {
+        @include wpdtrt-scss-hide-in-place;
+    }
 
-        &-screen {
-            @include wpdtrt-scss-hide-screen;
-        }
+    &-screen {
+        @include wpdtrt-scss-hide-screen;
+    }
 
-        &-visually {
-            @include wpdtrt-scss-hide-screen;
-        }
+    &-visually {
+        @include wpdtrt-scss-hide-screen;
     }
 }

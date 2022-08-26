@@ -5,20 +5,18 @@
 // @since       0.1.0
 //
 
-%wpdtrt-scss {
-    &-focus {
-        &-hide {
-            outline: none;
-        }
+%focus {
+    &-hide {
+        outline: none;
+    }
 
-        // separate rule to prevent rule merge from hiding rule from Safari
-        &-hide-polyfill {
-            outline: none;
-        }
+    // separate rule to prevent rule merge from hiding rule from Safari
+    &-hide-polyfill {
+        outline: none;
+    }
 
-        &-show {
-            outline: 3px solid var(--wpdtrt-scss-focus-color-outline);
-            outline-offset: 1px;
-        }
+    &-show {
+        outline: 3px solid var(--wpdtrt-scss-focus-color-outline);
+        outline-offset: 1px;
     }
 }

@@ -5,11 +5,11 @@
 // @since       0.1.0
 //
 
-@mixin wpdtrt-scss-show-in-place {
+@mixin show-in-place {
     visibility: visible;
 }
 
-@mixin wpdtrt-scss-show-screen {
+@mixin show-screen {
     position: relative !important; /* stylelint-disable-line declaration-no-important */
     top: auto;
     left: auto;
@@ -20,6 +20,6 @@
     overflow: visible;
 }
 
-@mixin wpdtrt-scss-show-visually {
-    @include wpdtrt-scss-show-screen;
+@mixin show-visually {
+    @include show-screen;
 }

@@ -38,26 +38,40 @@ npm uninstall wpdtrt-scss
 // Variables
 // -------------------------------------------------------------------
 
-@import '../node_modules/wpdtrt-scss/scss/variables/scss';
-@import 'variables/scss';
+@use '../node_modules/wpdtrt-scss/scss/variables/scss' as commonVariables;
+@use 'variables/scss' as localVariables;
 
 // -------------------------------------------------------------------
 // Mixins
 // -------------------------------------------------------------------
 
-@import '../node_modules/wpdtrt-scss/scss/mixins';
+@use '../node_modules/wpdtrt-scss/scss/mixins/colour';
+@use '../node_modules/wpdtrt-scss/scss/mixins/embed';
+@use '../node_modules/wpdtrt-scss/scss/mixins/hide';
+@use '../node_modules/wpdtrt-scss/scss/mixins/link';
+@use '../node_modules/wpdtrt-scss/scss/mixins/show';
+@use '../node_modules/wpdtrt-scss/scss/mixins/type';
+@use '../node_modules/wpdtrt-scss/scss/mixins/viewport';
 
 // -------------------------------------------------------------------
 // Extends
 // -------------------------------------------------------------------
 
-@import '../node_modules/wpdtrt-scss/scss/extends';
+@use '../node_modules/wpdtrt-scss/scss/extends/attachment';
+@use '../node_modules/wpdtrt-scss/scss/extends/focus';
+@use '../node_modules/wpdtrt-scss/scss/extends/hide';
+@use '../node_modules/wpdtrt-scss/scss/extends/img';
+@use '../node_modules/wpdtrt-scss/scss/extends/layout';
+@use '../node_modules/wpdtrt-scss/scss/extends/link';
+@use '../node_modules/wpdtrt-scss/scss/extends/reset';
+@use '../node_modules/wpdtrt-scss/scss/extends/show';
+@use '../node_modules/wpdtrt-scss/scss/extends/type';
 
 // -------------------------------------------------------------------
 // Styles
 // -------------------------------------------------------------------
 
-@import '../node_modules/wpdtrt-scss/scss/_backend';
+@use '../node_modules/wpdtrt-scss/scss/_backend';
 ```
 
 ### wpdtrt-pluginname/scss/backend.scss
@@ -73,20 +87,34 @@ npm uninstall wpdtrt-scss
 // Variables
 // -------------------------------------------------------------------
 
-@import '../node_modules/wpdtrt-scss/scss/variables/scss';
-@import 'variables/scss';
+@use '../node_modules/wpdtrt-scss/scss/variables/scss' as commonVariables;
+@use 'variables/scss' as localVariables;
 
 // -------------------------------------------------------------------
 // Mixins
 // -------------------------------------------------------------------
 
-@import '../node_modules/wpdtrt-scss/scss/mixins';
+@use '../node_modules/wpdtrt-scss/scss/mixins/colour';
+@use '../node_modules/wpdtrt-scss/scss/mixins/embed';
+@use '../node_modules/wpdtrt-scss/scss/mixins/hide';
+@use '../node_modules/wpdtrt-scss/scss/mixins/link';
+@use '../node_modules/wpdtrt-scss/scss/mixins/show';
+@use '../node_modules/wpdtrt-scss/scss/mixins/type';
+@use '../node_modules/wpdtrt-scss/scss/mixins/viewport';
 
 // -------------------------------------------------------------------
 // Extends
 // -------------------------------------------------------------------
 
-@import '../node_modules/wpdtrt-scss/scss/extends';
+@use '../node_modules/wpdtrt-scss/scss/extends/attachment';
+@use '../node_modules/wpdtrt-scss/scss/extends/focus';
+@use '../node_modules/wpdtrt-scss/scss/extends/hide';
+@use '../node_modules/wpdtrt-scss/scss/extends/img';
+@use '../node_modules/wpdtrt-scss/scss/extends/layout';
+@use '../node_modules/wpdtrt-scss/scss/extends/link';
+@use '../node_modules/wpdtrt-scss/scss/extends/reset';
+@use '../node_modules/wpdtrt-scss/scss/extends/show';
+@use '../node_modules/wpdtrt-scss/scss/extends/type';
 
 // -------------------------------------------------------------------
 // Styles (Optional)
@@ -107,27 +135,41 @@ npm uninstall wpdtrt-scss
 // Variables
 // -------------------------------------------------------------------
 
-@import '../node_modules/wpdtrt-scss/scss/variables/scss';
-@import 'variables/scss';
+@use '../node_modules/wpdtrt-scss/scss/variables/scss' as commonVariables;
+@use 'variables/scss' as localVariables;
 
 // -------------------------------------------------------------------
 // Mixins
 // -------------------------------------------------------------------
 
-@import '../node_modules/wpdtrt-scss/scss/mixins';
+@use '../node_modules/wpdtrt-scss/scss/mixins/colour';
+@use '../node_modules/wpdtrt-scss/scss/mixins/embed';
+@use '../node_modules/wpdtrt-scss/scss/mixins/hide';
+@use '../node_modules/wpdtrt-scss/scss/mixins/link';
+@use '../node_modules/wpdtrt-scss/scss/mixins/show';
+@use '../node_modules/wpdtrt-scss/scss/mixins/type';
+@use '../node_modules/wpdtrt-scss/scss/mixins/viewport';
 
 // -------------------------------------------------------------------
 // Extends
 // -------------------------------------------------------------------
 
-@import '../node_modules/wpdtrt-scss/scss/extends';
+@use '../node_modules/wpdtrt-scss/scss/extends/attachment';
+@use '../node_modules/wpdtrt-scss/scss/extends/focus';
+@use '../node_modules/wpdtrt-scss/scss/extends/hide';
+@use '../node_modules/wpdtrt-scss/scss/extends/img';
+@use '../node_modules/wpdtrt-scss/scss/extends/layout';
+@use '../node_modules/wpdtrt-scss/scss/extends/link';
+@use '../node_modules/wpdtrt-scss/scss/extends/reset';
+@use '../node_modules/wpdtrt-scss/scss/extends/show';
+@use '../node_modules/wpdtrt-scss/scss/extends/type';
 
 // -------------------------------------------------------------------
 // Styles (Optional)
 // -------------------------------------------------------------------
 
 // Optionally import frontend styles (in theme only to prevent conflicts)
-@import '../node_modules/wpdtrt-scss/scss/_frontend';
+@use '../node_modules/wpdtrt-scss/scss/_frontend' as commonFrontend;
 ```
 
 ### wpdtrt-themename/scss/wpdtrt-themename-variables.scss
@@ -141,14 +183,20 @@ npm uninstall wpdtrt-scss
 // Mixins
 // -------------------------------------------------------------------
 
-@import '../node_modules/wpdtrt-scss/scss/mixins';
+@use '../node_modules/wpdtrt-scss/scss/mixins/colour';
+@use '../node_modules/wpdtrt-scss/scss/mixins/embed';
+@use '../node_modules/wpdtrt-scss/scss/mixins/hide';
+@use '../node_modules/wpdtrt-scss/scss/mixins/link';
+@use '../node_modules/wpdtrt-scss/scss/mixins/show';
+@use '../node_modules/wpdtrt-scss/scss/mixins/type';
+@use '../node_modules/wpdtrt-scss/scss/mixins/viewport';
 
 // -------------------------------------------------------------------
 // Variables
 // -------------------------------------------------------------------
 
-@import '../node_modules/wpdtrt-scss/scss/variables/css';
-@import 'variables/css';
+@use '../node_modules/wpdtrt-scss/scss/variables/css' as commonCssVariables;
+@use '../node_modules/wpdtrt-scss/scss/variables/css' as localCssVariables;
 ```
 
 ### wpdtrt-themename/js/frontend.txt

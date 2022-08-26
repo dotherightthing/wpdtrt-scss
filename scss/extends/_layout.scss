@@ -5,14 +5,12 @@
 // @since       0.1.0
 //
 
-%wpdtrt-scss {
-    &-layout {
-        &-clear {
-            &::after {
-                content: '';
-                display: block;
-                clear: both;
-            }
+%layout {
+    &-clear {
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
         }
     }
 }
