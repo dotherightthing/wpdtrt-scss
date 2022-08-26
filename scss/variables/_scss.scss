@@ -40,10 +40,10 @@
 @use '../../../../node_modules/include-media/dist/include-media';
 
 $breakpoints: (
-    phone: 320px,
-    phone_large: 400px, // 414px
-    tablet_small: 550px,
-    tablet: 710px, // 768px
-    laptop: 1366px,
-    desktop: 2000px
-);
+    'phone': 320px,
+    'phone_large': 400px, // 414px
+    'tablet_small': 550px,
+    'tablet': 710px, // 768px
+    'laptop': 1366px,
+    'desktop': 2000px
+) !default;
