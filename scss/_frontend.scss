@@ -7,26 +7,7 @@
 // @since       0.1.0
 //
 
-// -------------------------------------------------------------------
-// Focus
-// -------------------------------------------------------------------
-
-// -------------------------------------------------------------------
-// Mixins
-// -------------------------------------------------------------------
-
-@use '../mixins/viewport';
-
-// -------------------------------------------------------------------
-// Extends
-// -------------------------------------------------------------------
-
-@use '../extends/focus' as *;
-@use '../extends/hide' as *;
-@use '../extends/img' as *;
-@use '../extends/layout' as *;
-@use '../extends/reset' as *;
-@use '../extends/type' as *;
+@use 'index' as wpdtrt-scss;
 
 a,
 button,
@@ -34,14 +15,14 @@ input,
 textarea,
 [tabindex] {
     &:focus {
-        @extend %focus-show;
+        @extend %wpdtrt-scss-focus-show;
 
         .no-js &:not(:focus-visible) {
-            @extend %focus-hide;
+            @extend %wpdtrt-scss-focus-hide;
         }
 
         .js-focus-visible &:not(.focus-visible) {
-            @extend %focus-hide-polyfill;
+            @extend %wpdtrt-scss-focus-hide-polyfill;
         }
     }
 }
@@ -51,14 +32,14 @@ textarea,
 // -------------------------------------------------------------------
 
 [hidden] {
-    @extend %hide-all;
+    @extend %wpdtrt-scss-hide-all;
 }
 
 // Text meant only for screen readers
 .accessible,
 .says,
 .screen-reader-text {
-    @extend %hide-screen;
+    @extend %wpdtrt-scss-hide-screen;
 }
 
 // -------------------------------------------------------------------
@@ -66,7 +47,7 @@ textarea,
 // -------------------------------------------------------------------
 
 img {
-    @extend %img-scale;
+    @extend %wpdtrt-scss-img-scale;
     height: auto;
     // Make sure images are scaled correctly.
     // Adhere to container width.
@@ -78,7 +59,7 @@ img {
 // -------------------------------------------------------------------
 
 .clear {
-    @extend %layout-clear;
+    @extend %wpdtrt-scss-layout-clear;
 }
 
 // -------------------------------------------------------------------
@@ -110,7 +91,7 @@ embed,
 iframe,
 object,
 video {
-    @extend %img-scale;
+    @extend %wpdtrt-scss-img-scale;
 }
 
 // -------------------------------------------------------------------
@@ -118,7 +99,7 @@ video {
 // -------------------------------------------------------------------
 
 .list-reset {
-    @extend %reset-list;
+    @extend %wpdtrt-scss-reset-list;
 }
 
 // -------------------------------------------------------------------
@@ -126,7 +107,7 @@ video {
 // -------------------------------------------------------------------
 
 .type-sharpen {
-    @extend %type-sharpen;
+    @extend %wpdtrt-scss-type-sharpen;
 }
 
 // -------------------------------------------------------------------
@@ -136,11 +117,11 @@ video {
 /* stylelint-disable */
 
 @-ms-viewport {
-    @include viewport.viewport;
+    @include wpdtrt-scss.viewport;
 }
 
 /* stylelint-enable */
 
 @viewport {
-    @include viewport.viewport;
+    @include wpdtrt-scss.viewport;
 }
