@@ -45,11 +45,11 @@
   "license": "ISC",
   "homepage": "https://github.com/dotherightthing/wpdtrt-scss",
   "srcDir": "/Volumes/DanBackup/Websites/wpdtrt-scss",
-  "devDependencies": {
-    "wpdtrt-npm-scripts": "github:dotherightthing/wpdtrt-npm-scripts#semver:*"
-  },
   "dependencies": {
     "focus-visible": "^5.2.0",
     "include-media": "github:eduardoboucas/include-media#2.0-release"
+  },
+  "devDependencies": {
+    "wpdtrt-npm-scripts": "github:dotherightthing/wpdtrt-npm-scripts"
   }
 }
