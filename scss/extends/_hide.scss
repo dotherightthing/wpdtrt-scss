@@ -7,7 +7,7 @@
 
 @use '../mixins/hide';
 
-%hide {
+%wpdtrt-scss-hide {
     &-all {
         @include hide.hide-all;
     }

@@ -7,7 +7,7 @@
 
 @use '../mixins/show';
 
-%show {
+%wpdtrt-scss-show {
     &-in-place {
         @include show.show-in-place;
     }

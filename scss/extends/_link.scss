@@ -7,7 +7,7 @@
 
 @use '../mixins/link';
 
-%link {
+%wpdtrt-scss-link {
     &-underline {
         @include link.link-underline(&);
     }

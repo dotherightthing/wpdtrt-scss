@@ -2,19 +2,19 @@
 // SCSS helpers
 //
 // Theme + Plugin usage:
-// @use '../node_modules/wpdtrt-scss/scss';
+// @use '../node_modules/wpdtrt-scss/scss/index';
 //
 // @package     WPDTRT_SCSS
 // @since       0.1.0
 //
 
 // Variables
-// prop: $wpdtrt-scss-foo;
+// prop: index.$wpdtrt-scss-foo;
 
 @forward 'variables/scss' as wpdtrt-scss-*;
 
 // Mixins
-// @include wpdtrt-scss-bar()
+// @include index.wpdtrt-scss-bar()
 
 @forward 'mixins/colour' as wpdtrt-scss-*;
 @forward 'mixins/embed' as wpdtrt-scss-*;
@@ -26,13 +26,15 @@
 
 // Extends
 // @extend %wpdtrt-scss-baz;
+// Note: extends do not support prefixing so are already prefixed
+// Note: extends do not support namespacing so are called directly
 
-@forward 'extends/attachment' as wpdtrt-scss-*;
-@forward 'extends/focus' as wpdtrt-scss-*;
-@forward 'extends/hide' as wpdtrt-scss-*;
-@forward 'extends/img' as wpdtrt-scss-*;
-@forward 'extends/layout' as wpdtrt-scss-*;
-@forward 'extends/link' as wpdtrt-scss-*;
-@forward 'extends/reset' as wpdtrt-scss-*;
-@forward 'extends/show' as wpdtrt-scss-*;
-@forward 'extends/type' as wpdtrt-scss-*;
+@forward 'extends/attachment';
+@forward 'extends/focus';
+@forward 'extends/hide';
+@forward 'extends/img';
+@forward 'extends/layout';
+@forward 'extends/link';
+@forward 'extends/reset';
+@forward 'extends/show';
+@forward 'extends/type';

@@ -5,7 +5,7 @@
 // @since       0.1.0
 //
 
-%type {
+%wpdtrt-scss-type {
     &-sharpen {
         // sass-lint:disable no-vendor-prefixes
         -moz-osx-font-smoothing: grayscale;
