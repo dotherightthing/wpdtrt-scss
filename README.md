@@ -120,6 +120,8 @@ Import `:focus-visible` polyfill for older Safari, see [#2](https://github.com/d
 
 #### Backend (wpdtrt-pluginname/scss/backend.scss)
 
+Note: `../node_modules/wpdtrt-scss/scss/_backend` and `../node_modules/wpdtrt-scss/scss/_frontend` are not imported again, as it is assumed that the plugin is being used with a `wpdtrt-themename`, see above.
+
 ```scss
 // -------------------------------------------------------------------
 // Imports
@@ -127,9 +129,6 @@ Import `:focus-visible` polyfill for older Safari, see [#2](https://github.com/d
 
 // Import wpdtrt-scss library helpers
 @use '../node_modules/wpdtrt-scss/scss' as wpdtrt-scss;
-
-// Import _backend styles
-@use '../node_modules/wpdtrt-scss/scss/_backend';
 
 // Import local variables
 @use 'variables/scss' as *;
