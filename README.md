@@ -114,10 +114,6 @@ Import `:focus-visible` polyfill for older Safari, see [#2](https://github.com/d
 
 // Import local variables
 @import 'variables/css' as *;
-
-// -------------------------------------------------------------------
-// Variables
-// -------------------------------------------------------------------
 ```
 
 ### Plugin
