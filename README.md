@@ -31,6 +31,10 @@ npm uninstall wpdtrt-scss
 #### Backend (wpdtrt-themename-backend.scss)()
 
 ```scss
+// -------------------------------------------------------------------
+// Imports
+// -------------------------------------------------------------------
+
 // Import wpdtrt-scss library helpers
 @use '../node_modules/wpdtrt-scss/scss' as wpdtrt-scss;
 
@@ -40,12 +44,18 @@ npm uninstall wpdtrt-scss
 // Import local variables
 @use 'variables/scss' as *;
 
-// Add theme styling (as required)
+// -------------------------------------------------------------------
+// Styles
+// -------------------------------------------------------------------
 ```
 
 #### Frontend (wpdtrt-themename.scss)
 
 ```scss
+// -------------------------------------------------------------------
+// Imports
+// -------------------------------------------------------------------
+
 // Import wpdtrt-scss library helpers
 @use '../node_modules/wpdtrt-scss/scss' as wpdtrt-scss;
 
@@ -64,7 +74,9 @@ $breakpoints: map-merge($breakpoints, wpdtrt-scss.$breakpoints);
 // Extend default `$breakpoint` map from local variables (optional)
 $breakpoints: map-merge($breakpoints, $local-breakpoints);
 
-// Add theme styling (as required)
+// -------------------------------------------------------------------
+// Styles
+// -------------------------------------------------------------------
 ```
 
 #### Frontend (wpdtrt-themename/js/frontend.txt)
@@ -75,17 +87,37 @@ Import `:focus-visible` polyfill for older Safari, see [#2](https://github.com/d
 ./node_modules/focus-visible/dist/focus-visible.min.js
 ```
 
+#### Theming (wpdtrt-themename/scss/variables/_css.scss)
+
+```scss
+// -------------------------------------------------------------------
+// Imports
+// -------------------------------------------------------------------
+
+// Import wpdtrt-scss library helpers (optional - mainly for use of `defineColorHSL`)
+@use '../../node_modules/wpdtrt-scss/scss' as wpdtrt-scss;
+
+// -------------------------------------------------------------------
+// Variables
+// -------------------------------------------------------------------
+```
+
 #### Theming (wpdtrt-themename-variables.scss)
 
 ```scss
-// Import wpdtrt-scss library helpers (optional - mainly for use of `defineColorHSL` mixins)
-@use '../node_modules/wpdtrt-scss/scss' as wpdtrt-scss;
+// -------------------------------------------------------------------
+// Imports
+// -------------------------------------------------------------------
 
 // Import CSS Custom Properties (to bundle backend variables with frontend variables)
 @use '../node_modules/wpdtrt-scss/scss/variables/css';
 
 // Import local variables
 @import 'variables/css' as *;
+
+// -------------------------------------------------------------------
+// Variables
+// -------------------------------------------------------------------
 ```
 
 ### Plugin
@@ -93,6 +125,10 @@ Import `:focus-visible` polyfill for older Safari, see [#2](https://github.com/d
 #### Backend (wpdtrt-pluginname/scss/backend.scss)
 
 ```scss
+// -------------------------------------------------------------------
+// Imports
+// -------------------------------------------------------------------
+
 // Import wpdtrt-scss library helpers
 @use '../node_modules/wpdtrt-scss/scss' as wpdtrt-scss;
 
@@ -102,12 +138,18 @@ Import `:focus-visible` polyfill for older Safari, see [#2](https://github.com/d
 // Import local variables
 @use 'variables/scss' as *;
 
-// Add theme styling (as required)
+// -------------------------------------------------------------------
+// Styles
+// -------------------------------------------------------------------
 ```
 
 #### Frontend (wpdtrt-pluginname/scss/frontend.scss)
 
 ```scss
+// -------------------------------------------------------------------
+// Imports
+// -------------------------------------------------------------------
+
 // Import wpdtrt-scss library helpers
 @use '../node_modules/wpdtrt-scss/scss' as wpdtrt-scss;
 
@@ -123,12 +165,18 @@ $breakpoints: map-merge($breakpoints, wpdtrt-scss.$breakpoints);
 // Extend default `$breakpoint` map from local variables (optional)
 $breakpoints: map-merge($breakpoints, $local-breakpoints);
 
-// Add theme styling (as required)
+// -------------------------------------------------------------------
+// Styles
+// -------------------------------------------------------------------
 ```
 
 #### Theming (wpdtrt-pluginname-variables.scss)
 
 ```scss
+// -------------------------------------------------------------------
+// Imports
+// -------------------------------------------------------------------
+
 // Import local variables
 @import 'variables/css' as *;
 ```
