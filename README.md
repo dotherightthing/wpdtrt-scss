@@ -4,6 +4,8 @@
 
 SCSS mixins and extends for shared theming across projects.
 
+Note: DTRT SCSS uses the [DTRT NPM Scripts](https://github.com/dotherightthing/wpdtrt-npm-scripts) build system. Please ensure that is up to date.
+
 ## Installation
 
 ```node
@@ -24,7 +26,22 @@ npm uninstall wpdtrt-scss
 
 ## Usage
 
-### wpdtrt-themename-backend.scss / wpdtrt-themename.scss / wpdtrt-pluginname/scss/backend.scss / wpdtrt-pluginname/scss/frontend.scss
+### wpdtrt-pluginname/scss/backend.scss / wpdtrt-themename-backend.scss
+
+```scss
+// Import wpdtrt-scss library helpers
+@use '../node_modules/wpdtrt-scss/scss' as wpdtrt-scss;
+
+// Import _backend styles
+@use '../node_modules/wpdtrt-scss/scss/_backend';
+
+// Import local variables
+@use 'variables/scss' as *;
+
+// Add theme styling (as required)
+```
+
+### wpdtrt-pluginname/scss/frontend.scss
 
 ```scss
 // Import wpdtrt-scss library helpers
@@ -33,10 +50,28 @@ npm uninstall wpdtrt-scss
 // Import `include media` library (including default `$breakpoint` map)
 @use '../node_modules/include-media/dist/include-media' as *;
 
-// Import _backend styles (if backend stylesheet, optional)
-@use '../node_modules/wpdtrt-scss/scss/_backend';
+// Import local variables
+@use 'variables/scss' as *;
 
-// Import _frontend styles (if frontend stylesheet - but only in theme to prevent conflicts, optional)
+// Extend default `$breakpoint` map from library variables
+$breakpoints: map-merge($breakpoints, wpdtrt-scss.$breakpoints);
+
+// Extend default `$breakpoint` map from local variables (optional)
+$breakpoints: map-merge($breakpoints, $local-breakpoints);
+
+// Add theme styling (as required)
+```
+
+### wpdtrt-themename.scss
+
+```scss
+// Import wpdtrt-scss library helpers
+@use '../node_modules/wpdtrt-scss/scss' as wpdtrt-scss;
+
+// Import `include media` library (including default `$breakpoint` map)
+@use '../node_modules/include-media/dist/include-media' as *;
+
+// Import _frontend styles (optional)
 @use '../node_modules/wpdtrt-scss/scss/_frontend';
 
 // Import local variables
@@ -53,12 +88,8 @@ $breakpoints: map-merge($breakpoints, $local-breakpoints);
 
 ### wpdtrt-themename-variables.scss
 
-1. Optionally import `@mixin` helpers (for use of `defineColorHSL` in `wpdtrt-themename/scss/variables/css`)
-2. Import CSS Custom Properties (to bundle backend variables with frontend variables)
-3. Import theme frontend variables
-
 ```scss
-// Import wpdtrt-scss library helpers (optional - mainly for use of `defineColorHSL`)
+// Import wpdtrt-scss library helpers (optional - mainly for use of `defineColorHSL` mixins)
 @use '../node_modules/wpdtrt-scss/scss' as wpdtrt-scss;
 
 // Import CSS Custom Properties (to bundle backend variables with frontend variables)
