@@ -113,7 +113,7 @@ Import `:focus-visible` polyfill for older Safari, see [#2](https://github.com/d
 @use '../node_modules/wpdtrt-scss/scss/variables/css';
 
 // Import local variables
-@import 'variables/css' as *;
+@use 'variables/css' as *;
 ```
 
 ### Plugin
@@ -174,5 +174,5 @@ $breakpoints: map-merge($breakpoints, $local-breakpoints);
 // -------------------------------------------------------------------
 
 // Import local variables
-@import 'variables/css' as *;
+@use 'variables/css' as *;
 ```
