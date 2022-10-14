@@ -41,8 +41,8 @@ npm uninstall wpdtrt-scss
 // Import _backend styles
 @use '../node_modules/wpdtrt-scss/scss/_backend';
 
-// Import local variables
-@use 'variables/scss' as *;
+// Import theme helpers
+@use '../scss' as *;
 
 // -------------------------------------------------------------------
 // Styles
