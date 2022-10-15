@@ -68,6 +68,9 @@ npm uninstall wpdtrt-scss
 // Import theme helpers
 @use '../scss' as *;
 
+// Import local icons
+@use '../icons/icomoon/style.scss' as *;
+
 // Extend default `$breakpoint` map from library variables
 $breakpoints: map-merge($breakpoints, wpdtrt-scss.$breakpoints);
 
@@ -156,6 +159,11 @@ Note: `../node_modules/wpdtrt-scss/scss/_frontend` is not imported again, as it 
 // Import local variables
 @use 'variables/scss' as *;
 
+// Import local icons
+@use '../icons/icomoon/style.scss' as *;
+
+// Import other libraries (optional)
+
 // Extend default `$breakpoint` map from library variables
 $breakpoints: map-merge($breakpoints, wpdtrt-scss.$breakpoints);
 
@@ -201,4 +209,9 @@ Icon sets are managed in <https://icomoon.io/app/>.
    * Metadata: *defaults*
    * Version: *defaults*
 3. Unzip and copy contents to *wpdtrt-pluginname/icons/icomoon*
-4. Add `/* stylelint-disable */` to the top of *wpdtrt-pluginname/icons/icomoon/style.scss*
+4. Open *wpdtrt-pluginname/icons/icomoon/style.scss*
+   * Prepend contents with `/* stylelint-disable */`
+5. Open *wpdtrt-pluginname/icons/icomoon/variables.scss*
+   * Prepend contents with `/* stylelint-disable */`
+   * Replace `$icomoon-font-family: "wpdtrt-pluginname" !default;` with `$icomoon-font-family: "wpdtrt-pluginname";`
+   * Replace `$icomoon-font-path: "fonts" !default;` with `$icomoon-font-path: '../icons/icomoon/fonts';`
