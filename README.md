@@ -177,3 +177,28 @@ $breakpoints: map-merge($breakpoints, $local-breakpoints);
 // Import local variables
 @use 'variables/css' as *;
 ```
+
+---
+
+### Icons
+
+Icon sets are managed in <https://icomoon.io/app/>.
+
+#### Exporting a set
+
+1. Select *Generate Font*
+2. Select the *Download* cog icon
+   * Font name: *wpdtrt-pluginname*
+   * Class Prefix: *wpdtrt-pluginname-icon-*
+   * *Don't* Support IE 8
+   * *Don't* Include metadata in fonts
+   * *Don't* Embed font is CSS (Premium)
+   * *Do* Generate preprocessor variables for: *Sass*
+   * *Don't* Generate Dart class for Flutter
+   * *Don't* Add empty glyph "0" if missing (for the "ch" unit)
+   * CSS Selector: *Use attribute selectors*
+   * Font Metrics: *defaults*
+   * Metadata: *defaults*
+   * Version: *defaults*
+3. Unzip and copy contents to *wpdtrt-pluginname/icons/icomoon*
+4. Add `/* stylelint-disable */` to the top of *wpdtrt-pluginname/icons/icomoon/style.scss*
