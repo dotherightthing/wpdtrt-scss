@@ -50,6 +50,6 @@
     "include-media": "github:eduardoboucas/include-media#2.0-release"
   },
   "devDependencies": {
-    "wpdtrt-npm-scripts": "github:dotherightthing/wpdtrt-npm-scripts"
+    "wpdtrt-npm-scripts": "github:dotherightthing/wpdtrt-npm-scripts#semver:*"
   }
 }
