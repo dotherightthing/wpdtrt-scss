@@ -159,7 +159,7 @@ Note: `../node_modules/wpdtrt-scss/scss/_frontend` is not imported again, as it 
 // Import local variables
 @use 'variables/scss' as *;
 
-// Import local icons
+// Import local icons (optional)
 @use '../icons/icomoon/style.scss' as *;
 
 // Import other libraries (optional)
