@@ -41,7 +41,7 @@ npm uninstall wpdtrt-scss
 // Import _backend styles
 @use '../node_modules/wpdtrt-scss/scss/_backend';
 
-// Import theme helpers
+// Import theme helpers (optional, can have side-effects on WordPress admin theme)
 @use '../scss' as *;
 
 // -------------------------------------------------------------------
