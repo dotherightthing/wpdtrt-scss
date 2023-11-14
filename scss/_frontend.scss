@@ -14,8 +14,12 @@ button,
 input,
 textarea,
 [tabindex] {
-    &:focus {
+    &:focus{
         @extend %wpdtrt-scss-focus-show;
+
+        &:focus-visible {
+            @extend %wpdtrt-scss-focus-show;
+        }
 
         .no-js &:not(:focus-visible) {
             @extend %wpdtrt-scss-focus-hide;
